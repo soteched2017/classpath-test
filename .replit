@@ -1,0 +1,42 @@
+# folder = directory
+
+# special directories:
+# . is the current folder
+# .. is the parent folder
+# hidden files and folders being with a . (dot)
+
+# commands:
+# cd .  # change directory to current folder
+# cd .. # change directory to parent folder
+# pwd   # shows present working directory
+# ls    # list
+# ls -a # list all, shows hidden files/folders
+
+# directories:
+# binaries = ./bin
+# source code = ./
+# no package
+run = "javac -d ./bin ./Main.java && java -cp ./:./bin Main"
+# run = "javac -d bin Main.java && java -cp .:./bin Main"
+# run = "javac -d bin Main.java && java -cp ./bin Main"
+
+# directories:
+# binaries = ./bin
+# source code = ./src
+# package = ./bin/com.peelsb.student
+# run = "javac -d ./bin src/MainSrc.java && java -cp .:./bin com.peelsb.student.MainSrc"
+
+# -d outputs to a file system folder
+# i.e.
+# run = "javac -d any/folder/output/ ./Main.java ./src/MainSrc.java && java -cp any/folder/output Main" 
+# run = "javac -d any/folder/output/ ./Main.java ./src/MainSrc.java && java -cp any/folder/output com.peelsb.student.MainSrc" 
+
+# -cp inputs from file system folder(s)
+# on macOS/linux use : (colon) to separate paths
+# on Windows use ; (semicolon) to separate paths
+
+# clean 
+# run = "rm -rf bin"
+
+# notice: 
+# typically, IDEs like Eclipse, IntelliJ, and NetBeans, organize use two folders: src and bin/output/build
